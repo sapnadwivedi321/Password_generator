@@ -1,9 +1,10 @@
 import React, { useState } from 'react'
 import "./App.css"
 import { numbers, upperCaseLetters, lowerCaseLetters, specialCharacters } from './Character'
-import { toast, ToastContainer } from 'react-toastify'
+import {  toast, ToastContainer } from 'react-toastify'
 import 'react-toastify/dist/ReactToastify.css';
-import { COPY_Fail, COPY_SUCCESS } from './Message';
+import { COPY_Fail, COPY_SUCCESS } from './Message'
+import {FaCopy} from "react-icons/fa";
 
 const App = () => {
   const [password, setPassword] = useState("")
@@ -95,7 +96,7 @@ const App = () => {
           <div className="generator__password">
             <h3 >{password}</h3>
             <button className="copy__btn">
-              <i onClick={handleCopyPassword} className="far fa-clipboard"></i>
+              <i onClick={handleCopyPassword} ><FaCopy/> </i>
             </button>
           </div>
           <div className="form-group">
